@@ -31,6 +31,11 @@ https://www.cnblogs.com/waytobestcoder/p/5323130.html
         *   CallerRunsPolicy 执行任务
         *   DiscardPolicy 忽视，什么都不会发生
         *   DiscardOldestPolicy 从队列中踢出最先进入队列（最后一个执行）的任务
+        
+        *	CallerRunsPolicy ：这个策略重试添加当前的任务，他会自动重复调用 execute() 方法，直到成功。
+		 *	AbortPolicy ：对拒绝任务抛弃处理，并且抛出异常。
+		 *	DiscardPolicy ：对拒绝任务直接无声抛弃，没有异常信息。
+		 *	DiscardOldestPolicy ：对拒绝任务不抛弃，而是抛弃队列里面等待最久的一个线程，然后把拒绝任务加到队列。
 
         *   实现RejectedExecutionHandler接口，可自定义处理器
 <div>&nbsp;</div>
