@@ -1,0 +1,9 @@
+接口BlockingQueue具体实现类：
+	1.ArrayBlockingQueue
+	2.LinkedBlockingQueue
+	3.DelayQueue
+	4.PriorityBlockingQueue
+		实现了一种排序的队列模型。这很类似与SortedSet，
+		通过队列的Comparator接口或者Comparable元素来排序元素。
+		这种情况下元素在队列中的出入就不是按照FIFO的形式，而是根据比较后的自然顺序来进行
+	5.SynchronousQueue
