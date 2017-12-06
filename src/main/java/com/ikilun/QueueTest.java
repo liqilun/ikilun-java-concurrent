@@ -12,6 +12,7 @@ public class QueueTest {
 		}
 		//返回队列头部的元素而不移除此元素
 		System.out.println(queue.element());//无元素会抛出异常
-		System.out.println(queue.peek());
+		//返回队列头部的元素而不移除此元素
+		System.out.println(queue.peek());//不会抛出异常
 	}
 }
