@@ -39,3 +39,25 @@ public class CountDownLatchTest {
 		}
 	}
 }
+
+
+/*@RequestMapping("/test.xhtml")
+@ResponseBody
+public String test() throws InterruptedException {
+	final CountDownLatch latch = new CountDownLatch(20);
+	final BlockingQueue<Object> queue = redisSupportService.getRedisQueue("test.queue.str");
+	for (int i = 0; i < 20; i++) {
+		executor.submit(new Runnable() {
+			@Override
+			public void run() {
+				for(int j = 0; j < 50; j++){
+					System.out.println("==>" + queue.poll());
+				}
+				latch.countDown();
+			}
+		});
+
+	}
+	latch.await();
+	return "ok";
+}*/
