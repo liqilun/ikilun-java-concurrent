@@ -86,3 +86,6 @@ https://www.cnblogs.com/waytobestcoder/p/5323130.html
         *   keepAliveTime和allowCoreThreadTimeout采用默认通常能满足
 
 *   以上都是理想值，实际情况下要根据机器性能来决定。如果在未达到最大线程数的情况机器cpu load已经满了，则需要通过升级硬件（呵呵）和优化代码，降低taskcost来处理。
+
+
+当线程池达到corePoolSize时，新提交任务将被放入workQueue中，等待线程池中任务调度执行 
